@@ -25,6 +25,8 @@
     <modules>
         <module>eurekaserver</module>
         <module>user</module>
+        <module>apiGateway</module>
+        <module>configServer</module>
     </modules>
 
     <dependencies>
