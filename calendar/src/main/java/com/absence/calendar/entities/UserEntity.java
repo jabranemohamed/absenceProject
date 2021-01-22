@@ -1,9 +1,11 @@
-package com.mhj.absence.user.entities;
+package com.absence.calendar.entities;
 
 import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -30,4 +32,10 @@ public class UserEntity implements Serializable {
 
     @Column(nullable = false, unique = true)
     private String encryptedPassword;
+
+    @OneToMany(mappedBy = "user")
+    private List<Absence> absences = new ArrayList<Absence>();
+
+
+
 }
